@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.cdnfonts.com/css/seven-segment"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calculator.css" />
+    <script defer src="calculator.js"></script>
+    <title>JavaScript Calculator</title>
+    <link rel="#" href="./DED.jpg" />
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <main class="calculator-main">
+      <div class="container">
+        <div class="displaying">
+          <input
+            type="text"
+            id="display"
+            class="display"
+            name="display"
+            readonly
+          />
+        </div>
+
+        <div class="remove">
+          <!-- Clear All -->
+          <button id="clear">AC</button>
+          <button id="back-space">back</button>
+        </div>
+
+        <div class="button-area">
+          <div class="numbers">
+            <button id="seven" class="nums">7</button>
+            <button id="eight" class="nums">8</button>
+
+            <button id="nine" class="nums">9</button>
+            <button id="four" class="nums">4</button>
+            <button id="five" class="nums">5</button>
+            <button id="six" class="nums">6</button>
+
+            <button id="one" class="nums">1</button>
+            <button id="two" class="nums">2</button>
+            <button id="three" class="nums">3</button>
+
+            <button id="zero" class="nums">0</button>
+            <button class="decimal">.</button>
+            <button class="equal">=</button>
+          </div>
+          <div class="math-operator">
+            <button class="div">÷</button>
+            <button class="mul">x</button>
+            <button class="sub">-</button>
+            <button class="add">+</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
