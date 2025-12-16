@@ -21,3 +21,18 @@ const clearAll = document.querySelector('#clear')
 
 // select display input
 const display = document.querySelector(".display")
+// select the second display
+const secondDisplay = document.querySelector('.second-display')
+
+
+for(let i = 0; i < numbers.length; i++ ){
+ numbers[i].addEventListener('click',()=>{
+  //console.log('clicked')
+  if(display.value === "0"){
+    display.value = numbers[i].textContent
+  } else {
+    display.value += numbers[i].textContent
+  }
+ } )
+}
+
