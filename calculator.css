@@ -1,5 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/seven-segment');
-
+h1 {
+  text-align: center;
+  color: rgb(101, 84, 110);
+font-family: 'Seven Segment', sans-serif;   margin-bottom: 20px;
+  font-size: 36px;
+}
 
 body {
   display: flex;
@@ -13,3 +18,415 @@ body {
   position: relative;
   font-family: 'Seven Segment', sans-serif;
 }
+
+
+.calculator-main {
+  /* background-color: rgb(99, 84, 104);
+  background-color: rgba(99, 84, 104, 0.853); */
+ /* background: linear-gradient(135deg, #d899d8 0%, #ac4fac 100%) ; */
+  background: linear-gradient(135deg, #d899d8 0%,#ac4fac 10%, #e8c898 100% );
+
+ padding: 30px; /* Much smaller! */
+  margin: 20px; /* Much smaller! */
+  max-width: 400px; /* Stops growing! */
+  width: 100%;
+  border: 7px solid rgb(66, 49, 72);
+  border-radius: 33px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.displaying {
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 15px;
+  border-radius: 18px;
+  margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.second-display{
+  min-height: 30px;
+  font-size: 29px;
+  color: rgba(122, 106, 138, 0.8);
+  text-align: right;
+  padding: 5px 10px;
+  margin-bottom: 8px;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  font-weight: 500;
+}
+
+.display {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 55px;
+  font-size: 36px;  /* BIGGER! */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  text-align: right;
+  box-sizing: border-box;
+  color: #7A6A8A;
+  font-weight: 700;  /* BOLDER! */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: 'Seven Segment', sans-serif;   margin-bottom: 20px;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+button {
+  appearance: button;
+  background-color: #e016cf;
+  /* background-color: #d018d6; */
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #42563f;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: 'Seven Segment', sans-serif;
+
+}
+
+button:after {
+  background-clip: padding-box;
+  background-color: #ffd2f5;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+button:main,
+button:focus {
+  user-select: auto;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+button:active:after {
+  border-width: 0 0 0px;
+}
+
+button:active {
+  padding-bottom: 10px;
+}
+
+.remove button {
+  background-color: #e57a1d;
+}
+
+.remove button:after {
+  background-clip: padding-box;
+  background-color: #ffd4ae;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.math-operator button {
+  background-color:  #6BA5D8; ;
+}
+
+.math-operator button:after {
+  background-clip: padding-box;
+  background-color:  #A8D5F0;;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* .numbers {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  justify-content: space-evenly;
+} */
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 60px); /* 3 fixed-width columns */
+  gap: 9px;
+  justify-content: center; /* keeps the grid centered */
+}
+
+.numbers button {
+  width: 60px;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.decimal {
+  background-color: #8170a3;
+}
+
+.decimal:after {
+  background-clip: padding-box;
+  background-color: #C8B8E8;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-area {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 9px;  /* Change from 12px to 9px for tighter spacing */
+  justify-content: center;
+  align-items: start;
+}
+
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 60px); /* 3 columns for numbers */
+  gap: 9px;
+}
+
+.math-operator {
+  display: grid;
+grid-template-rows: 60px 60px 60px 60px 60px;
+  gap: 9px;
+}
+
+.math-operator button,
+.numbers button {
+  align-self: start;
+  width: 60px;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.remove {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.remove button {
+  width: auto;
+  height: 45px;
+  padding: 10px 25px;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  gap: 9px;
+  justify-content: center;
+}
+
+.numbers button {
+  width: 60px;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+#zero {
+  grid-column: 1;
+}
+
+.decimal {
+  grid-column: 2;
+}
+
+.equal {
+  background-color: #70B8C8;;
+  grid-column: 3;
+  grid-row: 4;
+  width: 60px;
+  height: 60px;
+}
+
+.equal:after {
+  background-clip: padding-box;
+  background-color: #A0D8E8;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* From Uiverse.io by Galahhad */
+/* switch settings 👇 */
+
+.ui-switch {
+    position: fixed;
+  top: 20px;
+  right: 60px;
+  z-index: 1000;
+  /* switch */
+  --switch-bg: rgb(135, 150, 165);
+  --switch-width: 48px;
+  --switch-height: 20px;
+  /* circle */
+  --circle-diameter: 32px;
+  --circle-bg: rgb(0, 56, 146);
+  --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+}
+
+.ui-switch input {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-bg);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider .circle {
+  top: calc(var(--circle-inset) * -1);
+  left: 0;
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  position: absolute;
+  background: var(--circle-bg);
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  ;
+}
+
+.slider .circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: inherit;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
+}
+
+/* actions */
+
+.ui-switch input:checked+.slider .circle {
+  left: calc(100% - var(--circle-diameter));
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+}
+
+.ui-switch input:active+.slider .circle::before {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+
+/* dark mood*/
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #3a2e4f;
+  color: white;
+}
+
+body.dark-mode .calculator-main {
+  background: linear-gradient(135deg, #1c1c5f 0%, #1f1f2e 100%);
+  border-color: #25183b;
+}
+
+body.dark-mode .display {
+  background-color: #2a2a3e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .displaying {
+  background-color: rgba(42, 42, 62, 0.5);
+}
+
+body.dark-mode h1 {
+  color: #c8b8d8;
+}
+
+body.dark-mode button {
+background-color: #481843;
+}
+body.dark-mode button:after {
+background-color: #558caa;
+color: rgb(255, 255, 255);
+}
+
+
