@@ -28,7 +28,7 @@ body {
 
  padding: 30px; /* Much smaller! */
   margin: 20px; /* Much smaller! */
-  max-width: 400px; /* Stops growing! */
+  max-width: 400px;
   width: 100%;
   border: 7px solid rgb(66, 49, 72);
   border-radius: 33px;
