@@ -9,7 +9,7 @@ You can click through the interface or use full keyboard support! either way, ch
 
 ## Live Demo
 
-**Deplyed** : <br/>
+**Deployed** : <br/>
 [clicky-calculator](https://clicky-calculator.vercel.app/)
 
 ![clicky-calculator-screenshot](screenshot1.png)
