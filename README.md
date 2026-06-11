@@ -1,4 +1,4 @@
-# JavaScript_calculator
+# JavaScript_calculator – Clicky Calculator
 ## Date:12/16/2025
 ### By: Jameela Mohammed Saeed
 ***
